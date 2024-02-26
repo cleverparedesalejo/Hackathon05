@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparación de Celulares</title>
+
+</head>
+<body>
+
+<h1>Sistema de Reparación de Celulares</h1>
+
+<section>
+    <div>
+        <label for="firstname">Nombre:</label>
+        <input minlength="3" maxlength="6" id="inputText" type="text" placeholder="Nombre" />
+    </div>
+
+    <div>
+        <label for="lastname">Apellido:</label>
+        <input id="inputlastname" type="text" />
+    </div>
+
+    <div>
+        <label for="numerocelular">Celular:</label>
+        <input min="9" max="12" type="celular" />
+    </div>
+
+    <div>
+        <input type="submit" value="Enviar" />
+    </div>
+</section>
+
+<section>
+    <form id="formIngreso">
+        
+        <label for="numeroSerie">Número de Serie:</label>
+        <input type="text" id="numeroSerie" required>
+        
+        <label for="imei">IMEI:</label>
+        <input type="text" id="imei" required>
+        
+        <button type="button" onclick="verificarTelefono()">Verificar Teléfono</button>
+      </form>
+      
+      <div id="resultadoVerificacion"></div>
+
+</section>
+
+<script src="poo.js"></script>
+<script>
+     function verificarTelefono(){
+        document.getElementById('resultadoVerificacion').innerHTML = 'El teléfono cumple con los requisitos y ha sido ingresado para reparación.';
+}
+</script>
+</body>
+</html>
